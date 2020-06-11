@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      #ground {
+        background-image: url("assets/bg.jpg");
+        border: 20px solid green;
+        margin: 0 auto;
+        display: block;
+      }
+      #scoreBoard {
+        text-align: center;
+        background: green;
+        width: 1210px;
+        margin: 0 auto;
+        height: 100px;
+      }
+      #score {
+        margin: 0 auto;
+        position: absolute;
+        top: 20px;
+        left: 49.4%;
+        font-size: 1.3rem;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scoreBoard">
+      <span id="score">0</span>
+
+      <span>
+        <img
+          src="./assets/trophy.png"
+          alt="scroe"
+          width="72"
+          height="67"
+          style="margin-top: 15px;"
+      /></span>
+    </div>
+    <canvas id="ground" width="1170" height="520"></canvas>
+    <script src="js/game_logic.js"></script>
+  </body>
 </html>
